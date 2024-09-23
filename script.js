@@ -50,3 +50,14 @@
 
 // exercise 2.1
 
+let gridWrapper = document.querySelectorAll("#wrapper");
+
+function removeItem(itemToRemove) {
+    console.log("clicked" + itemToRemove);
+    // itemToRemove.getElementByClassName("img").src = "";
+    itemToRemove.removeChild(itemToRemove.children[0]);
+}
+
+for (const item of gridWrapper) {
+    addEventListener("click", removeItem(item));
+}
